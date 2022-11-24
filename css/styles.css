@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* Aquí definimos las Custom properties */
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --violet: hsl(277, 64%, 61%);
+  --white:hsl(0, 0%, 100%);
+  --white-p:hsla(0, 0%, 100%, 0.75);
+  --white-title:hsla(0, 0%, 100%, 0.6);
+  /* Tipografía */
+  --font-size: 15px;
+  --main-ff: "Inter", sans-serif;
+  --secondary-ff: "Lexend Deca", sans-serif;
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-family: var(--main-ff);
+  font-size: var(--font-size);
+  background-color: var(--main-bg);
+  color: var(--white-p);
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 375px;
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1100px;
+  }
+}
+.card__img {
+  position: relative;
+}
+.card__img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--violet);
+  opacity: 0.5;
+}
+@media screen and (min-width: 1440px) {
+  .card__img {
+    order: 1;
+  }
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 2.5rem 3.5rem;
+}
+@media screen and (min-width: 1440px) {
+  .card__content {
+    text-align: start;
+    align-items: flex-start;
+    margin: 1rem 5rem;
+  }
+}
+.card__h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1440px) {
+  .card__h1 {
+    font-size: 2rem;
+  }
+}
+.card__word {
+  color: var(--violet);
+}
+.card__p {
+  color: var(--white-title);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1440px) {
+  .card__p {
+    margin-bottom: 4rem;
+  }
+}
+.card__dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@media screen and (min-width: 1440px) {
+  .card__dates {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.5rem;
+  }
+}
+.card__numbers {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.card__description {
+  text-transform: uppercase;
+  color: var(--white-title);
+  font-family: var(--secondary-ff);
+  font-size: 0.9rem;
+}/*# sourceMappingURL=styles.css.map */

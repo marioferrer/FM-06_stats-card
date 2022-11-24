@@ -1,0 +1,19 @@
+@mixin flex ($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+
+// creamos mapa
+$breakpoints: (
+  desktop: 1440px
+);
+
+// declaramos el mixin para el mapa
+@mixin media($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
