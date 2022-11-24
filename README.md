@@ -25,8 +25,8 @@ Mobile
 
 ### Links
 
-- Solution Frontend Mentor: [Frontend solution](https://www.frontendmentor.io/solutions/order-summary-tGOy-2H1C6)
-- Live Site: [Live site with GitHub Pages](https://marioferrer.github.io/FM-05_order_summary/)
+- Solution Frontend Mentor: [Frontend solution](https://www.frontendmentor.io/solutions/stats-preview-card-pZAvoWb8Rh)
+- Live Site: [Live site with GitHub Pages](https://marioferrer.github.io/FM-06_stats-card/)
 
 ## My process
 
